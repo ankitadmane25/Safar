@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+
+    .logo {
+        margin-left: 10px;
+    }
+    .head {
+        background: linear-gradient(45deg, #d4953e, rgb(155, 107, 4), #da4804);
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Align items vertically */
+        padding: 10px; /* Add some padding */
+    }
+    .title {
+        font-size: 2.5rem; /* Use rem for responsive font size */
+        margin: 0 15px; /* Adjusted margin */
+        color: rgba(227, 225, 225, 0.842);
+    }
+    
+    body {
+      color: #d4953e;
+        font-family: "Poppins", sans-serif;
+        background-color: #ddcccc;
+        margin: 0;
+        padding: 0;
+    }
+    .mumbai, .nag, .jejuri {
+        background-size: cover;
+        background-position: center;
+        height: 70vh; /* Use viewport height for responsive height */
+        display: flex; /* Flexbox for centering content */
+        flex-direction: column; /* Vertical layout */
+        justify-content: center; /* Center vertically */
+        padding: 20px; /* Add padding */
+        color: #0f0a0a; /* Change text color for contrast */
+    }
+    h2 {
+        margin: 30px 0;
+        font-size: 2rem; /* Use rem for responsive font size */
+        margin-top: -300px;
+        color:rgb(0, 0, 0);
+        }
+    h4 {
+    
+        margin: 0 0 30px; /* Adjusted margin */
+        font-size: 1.5rem; /* Use rem for responsive font size */
+    }
+    p {
+         text-align: left;
+        font-family: sans-serif;
+        font-size: 25px; /* Use rem for responsive font size */
+        width: 1200px;
+        font-weight: bold;
+    }
+    .btn {
+        padding: 10px 20px; /* Added padding */
+        font-size: 1.25rem; /* Use rem for responsive font size */
+        border-radius: 10px;
+        background-color: #d4953ebb;
+        border: none;
+        font-weight: bolder;
+        cursor: pointer; /* Change cursor to pointer */
+        width: 200px;
+    }
+    .btn:hover {
+        background-color: #d4953e;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .title {
+            font-size: 2rem; /* Adjust title size for smaller screens */
+        }
+        .btn {
+            font-size: 1rem; /* Adjust button size for smaller screens */
+        }
+        h2 {
+            font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        }
+        h4 {
+            font-size: 1.25rem; /* Adjust subheading size for smaller screens */
+        }
+        p {
+            font-size: 1rem; /* Adjust paragraph size for smaller screens */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .head {
+            flex-direction: column; /* Stack logo and title */
+            align-items: flex-start; /* Align items to start */
+        }
+        .logo {
+            margin-left: 0; /* Reset margin */
+        }
+    }
+    .btns {
+    margin-left: auto; /* Let the container adjust dynamically */
+    margin-right: 10px; /* Add space on the right */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Enable wrapping on smaller screens */
+    justify-content: flex-end; /* Align buttons to the right on larger screens */
+}
+
+.sign {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: aliceblue;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sign:hover {
+    background-color: #d4953e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Buttons */
+@media (max-width: 768px) {
+    .btns {
+        justify-content: center; /* Center the buttons */
+        margin: 10px auto; /* Center the container */
+    }
+    .sign {
+        width: 90px; /* Adjust button width */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .btns {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap between buttons */
+        margin: 10px auto; /* Center the container */
+    }
+    .sign {
+        width: 80px; /* Further reduce button width */
+        font-size: 12px; /* Further reduce font size */
+    }
+}
+
+    </style>
+<body>
+    <div class="head">
+        <img src="logo.png" class="logo" height="100px" width="120px" />
+        <h1 class="title">Safar</h1>
+
+        <div class="btns">
+            <a href="signup page.html"><button class="sign">Signup</button></a>
+            <a href="login page.html"><button class="sign">Login</button></a>
+            
+        </div>
+    </div>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="mumbai" style="background-image: url('Taj.jpg');">
+                    <h2>Gate Way Of India</h2>
+                    <h4>Mumbai</h4>
+                    <button class="btn" onclick="change()">Know More</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="nag" style="background-image: url('nag.jpeg');">
+                    <h2>DikshaBhumi</h2>
+                    <h4>Nagpur</h4>
+
+                    <button class="btn" onclick="change()">Know More</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="jejuri" style="background-image: url('jejuri1.jpg');">
+                    <h2>Jejurgad</h2>
+                    <h4>Pune</h4>
+                    
+                    <button class="btn" >Know More</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="jejuri" style="background-image: url('Ellora.jpg');">
+                    <h2>Ellora Caves</h2>
+                    <h4>Chh.Sambhaji Nagar</h4>
+                    
+                    <button class="btn" >Know More</button>
+                </div>
+            </div>
+
+
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script type="module">
+        import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+        const swiper = new Swiper(".swiper", {
+            // Optional parameters
+            direction: "horizontal",
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: ".swiper-pagination",
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+        });
+        
+        function change() {
+            location.replace('signup page.html');
+        }
+    </script>
+</body>
+</html>
